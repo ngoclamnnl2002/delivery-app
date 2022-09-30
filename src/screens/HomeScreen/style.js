@@ -14,10 +14,22 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
   },
-  image: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 50,
+  search: {
+    marginTop: 15,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginHorizontal: 12,
+  },
+  searchInput: {
+    height: 40,
+    width: "80%",
+    backgroundColor: "#E9EAEE",
+    flexDirection: "row",
+  },
+  searchFilter: {
+    height: 30,
+    width: 30,
   },
 });
 
