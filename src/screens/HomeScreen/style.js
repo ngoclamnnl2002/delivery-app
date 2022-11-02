@@ -1,35 +1,49 @@
 import { StyleSheet } from "react-native";
+import theme from "../../theme";
 
 const styles = StyleSheet.create({
-  header: {
+  home: {
+    backgroundColor: theme.color.color_background["while"],
+  },
+  //logo
+  headerLogo: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
     marginHorizontal: 12,
   },
-  headerTitle: {
-    width: "70%",
+  headerLogoTitle: {
+    flex: 1,
+    marginLeft: 15,
   },
-  headerImage: {
-    height: 40,
-    width: 40,
-  },
-  search: {
-    marginTop: 15,
+  //search
+  headerSeach: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    marginVertical: 15,
     marginHorizontal: 12,
+    alignItems: "center",
   },
-  searchInput: {
+  headerSeachInput: {
+    flexDirection: "row",
+    alignItems: "center",
     height: 40,
-    width: "80%",
+    flex: 1,
     backgroundColor: "#E9EAEE",
-    flexDirection: "row",
+    marginRight: 10,
   },
-  searchFilter: {
-    height: 30,
-    width: 30,
+  //categories
+  card: {
+    marginRight: 10,
+    marginBottom: 15,
+  },
+  cardImg: {
+    height: 70,
+    width: 70,
+  },
+  cartText: {
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 3,
+    fontSize: theme.fontSize["text_sm"],
   },
 });
 

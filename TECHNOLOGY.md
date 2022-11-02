@@ -1,0 +1,3 @@
+- react native
+- react navigation
+- redux toolkit

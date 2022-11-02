@@ -1,1 +1,0 @@
-const abc = '#94D3CC'
