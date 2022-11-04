@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Pressable } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";

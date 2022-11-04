@@ -10,12 +10,13 @@ const styles = StyleSheet.create({
   iconBack: {
     position: "relative",
     zIndex: 10,
-    top: 50,
+    top: 90,
     left: 20,
     backgroundColor: theme.color.color_background["while"],
     width: 35,
     height: 35,
     borderRadius: 50,
+    marginTop: -35,
   },
   nameFood: {
     fontSize: 28,

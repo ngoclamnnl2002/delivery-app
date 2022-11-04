@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../theme/colors";
+import theme from "../../theme";
 
 const styles = StyleSheet.create({
   dish: {
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   dishDesText: {
-    color: colors.colorOpacity,
+    color: theme.color.color_text["gray"],
     fontSize: 13,
     marginTop: 2,
     lineHeight: 17,

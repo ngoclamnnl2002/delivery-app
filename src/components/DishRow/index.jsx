@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./style";
 import { addToBasket, removeFromBasket } from "../../redux/basketSlice";
+import { assetImages } from "../../config/assets";
 
 const DishRow = (props) => {
   const { id, title, price, imgUrl } = props;
@@ -67,14 +68,14 @@ const DishRow = (props) => {
           >
             <Image
               style={{ height: 30, width: 30, marginHorizontal: 12 }}
-              source={require("../../assets/minus.png")}
+              source={assetImages.icon_minus}
             />
           </TouchableOpacity>
           <Text>{products.length}</Text>
           <TouchableOpacity onPress={handleAddItem}>
             <Image
               style={{ height: 30, width: 30, marginHorizontal: 12 }}
-              source={require("../../assets/plus.png")}
+              source={assetImages.icon_plus}
             />
           </TouchableOpacity>
         </View>

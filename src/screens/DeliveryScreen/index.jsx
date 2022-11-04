@@ -1,7 +1,6 @@
 import {
   View,
   Text,
-  // SafeAreaView,
   TouchableOpacity,
   Image,
 } from "react-native";
@@ -13,8 +12,9 @@ import { useSelector } from "react-redux";
 import * as Progress from "react-native-progress";
 import MapView from "react-native-maps";
 import { Marker } from "react-native-maps";
+import { assetImages } from "../../config/assets";
 import styles from "./style";
-import colors from "../../theme/colors";
+import theme from "../../theme";
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
@@ -40,7 +40,7 @@ const DeliveryScreen = () => {
                 marginVertical: 9,
                 marginHorizontal: 8,
               }}
-              source={require("../../assets/arrow.png")}
+              source={assetImages.icon_arrow}
             />
           </TouchableOpacity>
           <Text style={{ color: "#fff", fontSize: 16 }}>Trợ giúp</Text>
@@ -51,7 +51,7 @@ const DeliveryScreen = () => {
             <View style={{ flex: 1 }}>
               <Text
                 style={{
-                  color: colors.colorOpacity,
+                  color: theme.color.color_text["gray"],
                   marginBottom: 5,
                   fontSize: 16,
                 }}
@@ -74,7 +74,7 @@ const DeliveryScreen = () => {
             color="#00CCBB"
             indeterminate={true}
           />
-          <Text style={{ color: colors.colorOpacity }}>
+          <Text style={{ color: theme.color.color_text["gray"] }}>
             Đơn của bạn đang được {restaurant.title} chuẩn bị
           </Text>
         </View>
@@ -102,14 +102,14 @@ const DeliveryScreen = () => {
         <View style={styles.deliveryInfoShiper}>
           <Image
             style={{ width: 40, height: 40, borderRadius: 50 }}
-            source={require("../../assets/images/logo/logo_shipper.png")}
+            source={assetImages.logo_shipper}
           />
           <View style={{ flex: 1, marginLeft: 12 }}>
             <Text style={{ fontWeight: "bold", fontSize: 15 }}>
               Nguyễn Ngọc Lâm
             </Text>
             <Text
-              style={{ color: colors.colorOpacity, fontSize: 12, marginTop: 3 }}
+              style={{ color: theme.color.color_text["gray"], fontSize: 12, marginTop: 3 }}
             >
               Shiper của bạn
             </Text>

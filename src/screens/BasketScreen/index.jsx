@@ -10,8 +10,9 @@ import React, { useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./style";
-import colors from "../../theme/colors";
 import { removeFromBasket } from "../../redux/basketSlice";
+import { assetImages } from "../../config/assets";
+import theme from "../../theme";
 
 const BasketScreen = () => {
   const navigation = useNavigation();
@@ -31,16 +32,18 @@ const BasketScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: colors.backgroundColor }}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: theme.color.color_background["gray"],
+        }}
+      >
         <View style={styles.basketHeader}>
           <View>
             <Text
               style={{ textAlign: "center", fontWeight: "bold", fontSize: 16 }}
             >
               Giỏ hàng
-            </Text>
-            <Text style={{ textAlign: "center", color: colors.colorOpacity }}>
-              {restaurant.title}
             </Text>
           </View>
           <TouchableOpacity
@@ -54,7 +57,7 @@ const BasketScreen = () => {
                 marginVertical: 9,
                 marginHorizontal: 8,
               }}
-              source={require("../../assets/close.png")}
+              source={assetImages.icon_close}
             />
           </TouchableOpacity>
         </View>
@@ -62,7 +65,7 @@ const BasketScreen = () => {
         <View style={styles.basketTimeDiliver}>
           <Image
             style={{ width: 35, height: 35, borderRadius: 50 }}
-            source={require("../../assets/images/logo/logo_shipper.png")}
+            source={assetImages.logo_shipper}
           />
           <Text style={{ flex: 1, marginLeft: 15 }}>
             Giao hàng trong 15 - 20 phút
@@ -91,7 +94,7 @@ const BasketScreen = () => {
               >
                 <Image
                   style={{ height: 30, width: 30, marginLeft: 12 }}
-                  source={require("../../assets/minus.png")}
+                  source={assetImages.icon_minus}
                 />
               </TouchableOpacity>
             </View>
@@ -108,10 +111,10 @@ const BasketScreen = () => {
               borderBottomColor: "#94D3CC",
             }}
           >
-            <Text style={{ flex: 1, color: colors.colorOpacity }}>
+            <Text style={{ flex: 1, color: theme.color.color_text["gray"] }}>
               Tổng cộng ({products.length} món)
             </Text>
-            <Text style={{ color: colors.colorOpacity }}>
+            <Text style={{ color: theme.color.color_text["gray"] }}>
               {Intl.NumberFormat("de-DE").format(totalPrice)}đ
             </Text>
           </View>
@@ -124,10 +127,10 @@ const BasketScreen = () => {
               borderBottomColor: "#94D3CC",
             }}
           >
-            <Text style={{ flex: 1, color: colors.colorOpacity }}>
+            <Text style={{ flex: 1, color: theme.color.color_text["gray"] }}>
               Phí giao hàng
             </Text>
-            <Text style={{ color: colors.colorOpacity }}>
+            <Text style={{ color: theme.color.color_text["gray"] }}>
               {products.length == 0 ? 0 : "15.000"}đ
             </Text>
           </View>

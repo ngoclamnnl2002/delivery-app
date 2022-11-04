@@ -51,7 +51,7 @@ const RestaurantScreen = () => {
             marginVertical: 9,
             marginHorizontal: 8,
           }}
-          source={require("../../assets/arrow.png")}
+          source={assetImages.icon_arrow}
         />
       </TouchableOpacity>
       <ScrollView
@@ -59,7 +59,7 @@ const RestaurantScreen = () => {
           products.length != 0 ? { marginBottom: 90 } : { marginBottom: 20 }
         }
       >
-        <View style={{ position: "relative" }}>
+        <View>
           <Image style={styles.imageFood} source={{ uri: imgUrl }} />
         </View>
 
