@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./style";
 import RestaurantCard from "../RestaurantCard";
 import { assetImages } from "../../config/assets";
+import theme from "../../theme";
 
 const FeaturedRow = (props) => {
   const { title, description } = props;
@@ -11,6 +12,14 @@ const FeaturedRow = (props) => {
     <View style={styles.feature}>
       <View style={styles.featureHeader}>
         <Text style={styles.featureHeaderText}>{title}</Text>
+        <Text
+          style={{
+            color: theme.color.color_text["gray"],
+            fontSize: theme.fontSize["text_xs"],
+          }}
+        >
+          Xem tất cả
+        </Text>
         <Image
           style={{ width: 20, height: 20 }}
           source={assetImages.icon_next}

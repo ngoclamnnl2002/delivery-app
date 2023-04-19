@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   },
   featureHeader: {
     flexDirection: "row",
+    alignItems: 'center'
   },
   featureHeaderText: {
     fontWeight: "bold",

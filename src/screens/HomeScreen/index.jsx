@@ -11,6 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import FeaturedRow from "../../components/FeaturedRow";
 import theme from "../../theme";
 import { assetImages } from "../../config/assets";
+import { featured } from "../../assets/db";
 import styles from "./style";
 
 const HomeScreen = () => {
@@ -147,7 +148,7 @@ const HomeScreen = () => {
         </ScrollView>
 
         {/* Featured */}
-        {featuredRow.map((item, index) => (
+        {featured.map((item, index) => (
           <FeaturedRow
             key={index}
             title={item.title}
